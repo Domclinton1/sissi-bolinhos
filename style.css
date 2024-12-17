@@ -21,6 +21,13 @@ body {
 html {
     scroll-behavior: smooth;
 }
+@media screen and (max-width: 450px) {
+    section{
+        max-width: 450px;
+        width: 100%;
+    }
+    
+}
 .promo-alert {
     background-color: #000;
     padding: 10px;
@@ -79,7 +86,24 @@ html {
 
 .hero .cta-button:hover {
     background-color: #D95448;
+    color: gold;
 }
+@media screen and (max-width: 450px) {
+    .hero {
+        padding: 10px;
+    }
+    .hero-text {
+        max-width: 450px;
+        width: 100%;
+    }
+    .hero-text h1 {
+        font-size: 2.3rem;
+    }
+    .hero-text p {
+        font-size: 1.3rem;
+    }
+}
+
 /*Inicio da sessão introdução*/
 .introduction {
     background-color: #FFFAF0;
@@ -133,6 +157,20 @@ html {
 .introduction .cta-button:hover {
     background-color: #D95448;
 }
+@media screen and (max-width: 450px) {
+    .introduction {
+        max-width: 450px;
+        width: 100%;
+    }
+    .introduction h1 {
+        font-size: 2rem;
+    }
+    video {
+        
+        width: 100%;
+    }
+}
+
 
 /*Inicio da sessão sobre*/
 .about-section {
