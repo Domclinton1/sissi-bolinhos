@@ -166,7 +166,7 @@ html {
         font-size: 2rem;
     }
     video {
-        
+        max-width: 450px;
         width: 100%;
     }
 }
