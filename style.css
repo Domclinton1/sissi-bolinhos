@@ -16,7 +16,7 @@
 
 }
 body {
-    background-color: var(--marfim-bege);
+    background-color: #e88585;
 }
 html {
     scroll-behavior: smooth;
@@ -168,13 +168,14 @@ html {
     video {
         max-width: 450px;
         width: 100%;
+        border-radius: 8px;
     }
 }
 
 
 /*Inicio da sessão sobre*/
 .about-section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 30px;
     background: #fff;
@@ -262,10 +263,10 @@ html {
 
 /*Inicio da sessão garantia e autoridade*/
 .guarantee-section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 30px;
-    background: #FF6F61;
+    background: #1d1d1d;
     color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -289,7 +290,7 @@ html {
 
 .guarantee-highlight {
     font-weight: bold;
-    color: #D2A679;
+    color: var(--rosa-claro);
 }
 
 .guarantee-stamp {
@@ -306,6 +307,8 @@ html {
     background-color: #FDF5E6;
     padding: 50px 20px;
     text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .testimonials h2 {
@@ -351,11 +354,12 @@ html {
 .cta-section {
     margin: 50px auto;
     padding: 30px;
-    background: #FF6F61;
+    background: #1d1d1d;
     color: #fff;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
 }
 
 .cta-section h2 {
@@ -382,11 +386,12 @@ html {
 
 .cta-button:hover {
     background-color: #C49A64;
+    color: #fff;
 }
 
 /*inicio da sessão faq*/
 .faq-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 20px;
     background: #fff;
@@ -459,4 +464,49 @@ html {
 
 .action-button:hover {
     background-color: #E65B50;
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF6F61;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #FF6F61;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #FFD700;
+}
+
+.footer .credits {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
 }
