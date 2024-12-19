@@ -109,6 +109,13 @@ html {
     max-width: 900px;
     width: 100%;
     filter: drop-shadow(0px 0px 30px rgb(215, 30, 61));
+    
+}
+.intro-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .introduction {
     background-color: #FFFAF0;
@@ -267,6 +274,97 @@ html {
 .highlight {
     color: #FF6F61;
     font-weight: bold;
+}
+
+/* Sessão de Provas Sociais */
+.social-proof {
+    background-color: #FFFAF0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.social-proof h2 {
+    font-size: 2.5rem;
+    color: #FF6F61;
+    margin-bottom: 20px;
+}
+
+.social-proof p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Galeria no modo carrossel */
+.social-proof .gallery {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.social-proof .carousel {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    gap: 20px;
+    transition: transform 0.3s ease; /* Para suavizar o deslize manual */
+    will-change: transform;
+}
+
+.social-proof .slide {
+    flex: 0 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+.social-proof img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.social-proof img:hover {
+    transform: scale(1.05);
+}
+
+.social-proof .caption {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Animação de rolagem */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 450px) {
+    .social-proof .carousel {
+        animation: scroll 20s linear infinite;
+        gap: 15px;
+        animation: none;
+    }
+
+    .social-proof .slide {
+        width: 80%;
+        max-width: 250px;
+    }
+   
+
+    .social-proof .touch-carousel {
+        overflow-x: hidden; /* Evita rolagem fora do limite */
+        touch-action: pan-x; /* Habilita rolagem horizontal apenas */
+    }
 }
 
 
