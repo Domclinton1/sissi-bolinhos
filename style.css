@@ -169,6 +169,12 @@ html {
 .introduction .cta-button:hover {
     background-color: #D95448;
 }
+.introduction video {
+    width: 100%; /* O vídeo ocupará toda a largura do contêiner */
+    height: auto; /* Mantém a proporção do vídeo */
+    display: block; /* Remove espaçamentos extras em navegadores */
+    object-fit: cover; /* Garante que o vídeo preencha completamente a tag */
+}
 @media screen and (max-width: 450px) {
     .introduction {
         max-width: 450px;
@@ -185,6 +191,12 @@ html {
     .intro-bg img {
         max-width: 450px;
         width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    video {
+        width: 100%;
+        height: auto;
     }
 }
 
