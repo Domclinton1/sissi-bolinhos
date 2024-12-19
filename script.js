@@ -30,3 +30,49 @@
         question.classList.toggle('active');
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.touch-carousel .carousel');
+
+    carousels.forEach(carousel => {
+        let startX = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let isDragging = false;
+
+        const slides = carousel.children;
+        const totalSlides = slides.length;
+        const slideWidth = slides[0].offsetWidth;
+
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            carousel.style.transition = 'none'; // Remove transição enquanto arrasta
+        });
+
+        carousel.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            const currentX = e.touches[0].clientX;
+            const deltaX = currentX - startX;
+            currentTranslate = prevTranslate + deltaX;
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        });
+
+        carousel.addEventListener('touchend', () => {
+            isDragging = false;
+
+            // Calcula o slide mais próximo
+            const movedSlides = Math.round(-currentTranslate / slideWidth);
+            const clampedSlides = Math.max(0, Math.min(movedSlides, totalSlides - 1));
+
+            // Atualiza o deslocamento
+            currentTranslate = -clampedSlides * slideWidth;
+            prevTranslate = currentTranslate;
+
+            // Aplica a transição para o slide mais próximo
+            carousel.style.transition = 'transform 0.3s ease';
+            carousel.style.transform = `translateX(${currentTranslate}px)`;
+        });
+    });
+});
