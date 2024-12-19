@@ -29,15 +29,98 @@ html {
     
 }
 .promo-alert {
-    background-color: #000;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
     color: #fff;
-    z-index: 99;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    
 }
+
+.promo-alert p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 0;
+    animation: pulse 3s infinite;
+}
+
+.highlight {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+.date-highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.countdown-label {
+    font-size: 1.1rem;
+    font-style: italic;
+    display: block;
+    margin-top: 5px;
+}
+
+#countdown {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #ffd43b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Animação para chamar atenção */
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+/* Menu */
+.menu {
+    text-decoration: none;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: var(--coral-vibrante);
+    width: 100%;
+    z-index: 99;
+    transition: all 0.3s ease-in-out; /* Transição suave */
+}
+
+/* Fixo ao rolar */
+.menu.fixed {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Espaço extra para compensar o .menu */
+.hero {
+    margin-top: 0p; /* Será ajustado pelo JavaScript */
+}
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menu a:hover {
+    color: gold;
+    transform: scale(1.2, 1.4);
+}
+
 
 /*Inicio da sessão hero*/
 .hero {
