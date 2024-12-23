@@ -28,6 +28,9 @@ html {
     }
     
 }
+.logo img {
+    width: 100px;
+}
 .promo-alert {
     background: linear-gradient(90deg, #ff6b6b, #f06595);
     color: #fff;
